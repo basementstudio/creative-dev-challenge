@@ -1,0 +1,83 @@
+@import '~/css/helpers';
+
+.container {
+  z-index: 50;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  background: var(--color-black);
+}
+
+.logo {
+  height: 1.25rem;
+
+  @include respond-to('min-tablet') {
+    height: 1.5rem;
+  }
+  @include respond-to('min-desktop-sm') {
+    height: 1.75rem;
+  }
+
+  & svg {
+    height: 100%;
+  }
+}
+
+.header {
+  height: 4.5rem;
+  padding: 0 tovw(16px, 16px, 'mobile');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 40;
+  position: relative;
+}
+
+.icon {
+  width: 2.75rem;
+  height: 2.75rem;
+
+  & svg {
+    height: 100%;
+  }
+}
+
+.announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-lighter);
+  background: var(--color-black);
+  height: 40px;
+  width: 100%;
+
+  & svg {
+    height: 12px;
+  }
+
+  & .announcementText {
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-size: max(12px, 0.625vw);
+
+    & span {
+      display: none;
+      @include respond-to('min-tablet-lg') {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 tovw(30px);
+  }
+
+  .logo {
+    flex-grow: 1;
+    flex-basis: 30%;
+  }
+}
