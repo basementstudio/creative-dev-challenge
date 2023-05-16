@@ -1,0 +1,18 @@
+@import '~/css/helpers';
+
+.container {
+  display: grid;
+  gap: tovw(32px, 16px, 'desktop');
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: tovw(500px, 300px, 'desktop');
+}
+
+.image {
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

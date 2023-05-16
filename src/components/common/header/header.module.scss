@@ -1,0 +1,19 @@
+@import '~/css/helpers';
+
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  padding: 0 tovw(30px, 16px, 'desktop');
+  width: 100%;
+  height: tovw(72px, 72px, 'desktop');
+  mix-blend-mode: difference;
+}
+
+.logo {
+  width: tovw(192px, 192px, 'desktop');
+  height: tovw(28px, 28px, 'desktop');
+}

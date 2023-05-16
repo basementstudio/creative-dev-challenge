@@ -1,0 +1,89 @@
+@import '~/css/helpers';
+
+$fullscreen-font: calc(10.1vw - 6px);
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100%;
+    white-space: nowrap;
+    font-family: var(--font-display);
+    font-size: tovw(139px, 48px, 'desktop');
+
+    &::selection {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+
+    span {
+      margin-top: tovw(28px, 24px, 'desktop');
+      text-shadow: tovw(-1px, -1px, 'desktop') tovw(-1px, -1px, 'desktop') 0
+          var(--color-white),
+        tovw(1px, 1px, 'desktop') tovw(-1px, -1px, 'desktop') 0
+          var(--color-white),
+        tovw(-1px, -1px, 'desktop') tovw(1px, 1px, 'desktop') var(--color-white),
+        tovw(1px, 1px, 'desktop') tovw(1px, 1px, 'desktop') 0 var(--color-white);
+      color: var(--color-black);
+      font-size: tovw(200px, 64px, 'desktop');
+
+      &::selection {
+        background: var(--color-white);
+        text-shadow: tovw(-1px, -1px, 'desktop') tovw(-1px, -1px, 'desktop') 0
+            var(--color-black),
+          tovw(1px, 1px, 'desktop') tovw(-1px, -1px, 'desktop') 0
+            var(--color-black),
+          tovw(-1px, -1px, 'desktop') tovw(1px, 1px, 'desktop')
+            var(--color-black),
+          tovw(1px, 1px, 'desktop') tovw(1px, 1px, 'desktop') 0
+            var(--color-black);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.marquee {
+  margin: tovw(90px, 40px, 'desktop') 0 tovw(90px, 40px, 'desktop') 0;
+  border-top: tovw(1px, 1px, 'desktop') solid var(--color-white);
+  border-bottom: tovw(1px, 1px, 'desktop') solid var(--color-white);
+  padding: tovw(12px, 12px, 'desktop') 0;
+  animation: appear 1.25s ease-in-out;
+  width: calc(100% + tovw(120px, 120px, 'desktop')) !important;
+
+  p {
+    margin-right: tovw(16px, 16px, 'desktop');
+    font-size: tovw(35px, 24px, 'desktop');
+  }
+}
+
+.awwward {
+  position: absolute;
+  right: tovw(30px, 16px, 'desktop');
+  bottom: 0;
+  transform: translateY(15%);
+  z-index: 10;
+
+  img {
+    width: tovw(250px, 145px, 'desktop');
+    height: tovw(360px, 210px, 'desktop');
+  }
+}
+
+@keyframes appear {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
