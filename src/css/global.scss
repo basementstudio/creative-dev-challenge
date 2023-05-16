@@ -61,3 +61,8 @@ html.fonts-loaded body {
   opacity: 1 !important;
 }
 // end warning
+
+*::selection {
+  color: #000;
+  background-color: #fff;
+}

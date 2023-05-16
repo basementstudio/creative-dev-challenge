@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Welcome } from '~/components/common/welcome'
+import { Hero } from './components/hero'
 
 const HomePage = () => {
   return (
     <>
-      <Welcome />
+      <Hero />
     </>
   )
 }

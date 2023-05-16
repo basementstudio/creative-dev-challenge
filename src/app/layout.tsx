@@ -1,12 +1,31 @@
 import '~/css/global.scss'
 
+import clsx from 'clsx'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+
+import { Footer } from '~/components/common/footer'
+import { Header } from '~/components/common/header'
 
 import { AppHooks } from './app-hooks'
-import { Header } from './components/header'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-body' })
+const basementGrotesque = localFont({
+  src: '../fonts/BasementGrotesque-Black_v1.202.woff2',
+  display: 'swap',
+  variable: '--font-body'
+})
+
+const basementGrotesqueDisplay = localFont({
+  src: '../fonts/BasementGrotesqueDisplay-UltraBlackExtraExpanded.otf',
+  display: 'swap',
+  variable: '--font-display'
+})
+
+const neueMontreal = localFont({
+  src: '../fonts/PPNeueMontreal-Regular.woff2',
+  display: 'swap',
+  variable: '--font-text'
+})
 
 export const metadata: Metadata = {
   title: {
@@ -37,9 +56,17 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body style={{ opacity: 0 }} className={inter.variable}>
+      <body
+        style={{ opacity: 0 }}
+        className={clsx(
+          basementGrotesque.variable,
+          neueMontreal.variable,
+          basementGrotesqueDisplay.variable
+        )}
+      >
         <Header />
         {children}
+        <Footer />
         <AppHooks />
       </body>
     </html>
