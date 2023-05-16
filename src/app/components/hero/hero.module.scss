@@ -1,0 +1,79 @@
+@import '~/css/helpers';
+@import '~/css/text';
+
+$fullscreen-font: calc(10.2vw - 6px);
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+
+  .container {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .text {
+      display: flex;
+      flex-direction: column;
+      font-size: $fullscreen-font;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      max-width: 100%;
+      font-family: var(--font-display);
+
+      &::selection {
+        color: var(--color-black);
+        background: var(--color-white);
+      }
+
+      & .textSpan {
+        color: var(--color-black);
+        text-shadow: -1px -1px 0 var(--color-white),
+          1px -1px 0 var(--color-white), -1px 1px var(--color-white),
+          1px 1px 0 var(--color-white);
+        transform-origin: top;
+        transform: scale(1.2);
+
+        &::selection {
+          color: var(--color-white);
+          text-shadow: -1px -1px 0 var(--color-black),
+            1px -1px 0 var(--color-black), -1px 1px var(--color-black),
+            1px 1px 0 var(--color-black);
+          background: var(--color-white);
+        }
+      }
+    }
+  }
+
+  & .marquee {
+    animation: appear 1.25s ease-in-out;
+    padding: 12px 0;
+    margin-top: calc($fullscreen-font / 2);
+    border-top: 1px solid var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+
+    & .marqueeText {
+      margin-right: 16px;
+      @include text-size-sm;
+      @include respond-to('min-tablet') {
+        @include text-size-md;
+      }
+      @include respond-to('min-desktop-sm') {
+        @include text-size-lg;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
