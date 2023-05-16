@@ -7,7 +7,6 @@ $fullscreen-font: calc(10.2vw - 6px);
   position: relative;
   overflow-x: hidden;
   margin-top: calc($fullscreen-font / 2);
-  margin-bottom: calc($fullscreen-font / 2);
 
   .container {
     padding: 12px 0;
@@ -53,6 +52,8 @@ $fullscreen-font: calc(10.2vw - 6px);
   & .marquee {
     animation: appear 1.25s ease-in-out;
     padding: 12px 0;
+    margin-top: calc($fullscreen-font / 2);
+    margin-bottom: calc($fullscreen-font / 2);
     border-top: 1px solid var(--color-white);
     border-bottom: 1px solid var(--color-white);
 
