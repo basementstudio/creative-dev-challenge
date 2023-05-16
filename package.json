@@ -22,6 +22,7 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.5.2",
     "react-merge-refs": "1.1.0",
     "zustand": "^4.3.1"
   },
@@ -148,7 +149,9 @@
       ],
       "prettier/prettier": [
         "warn",
-        { "endOfLine": "auto" }
+        {
+          "endOfLine": "auto"
+        }
       ],
       "@typescript-eslint/explicit-module-boundary-types": "off"
     },
