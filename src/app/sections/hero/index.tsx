@@ -1,17 +1,12 @@
 import clsx from 'clsx'
-import Image from 'next/image'
-import React, { useRef } from 'react'
+import React from 'react'
 import Marquee from 'react-fast-marquee'
 
 import { Container } from '~/components/layout/container'
 
 import s from './hero.module.scss'
 
-// [TODO] review semantic structure because h1 and h2 tags are tecnically both part of the h1.
-
 export const Hero = () => {
-  // Get the modal state from the global store
-
   return (
     <div className={s.wrapper}>
       <Container as="section" className={s.container}>
