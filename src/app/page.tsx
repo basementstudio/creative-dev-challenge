@@ -1,11 +1,15 @@
 import React from 'react'
 
-import { Hero } from './components/hero'
+import { FooterGallery } from './sections/footer-gallery'
+import { Gallery } from './sections/gallery'
+import { Hero } from './sections/hero'
 
 const HomePage = () => {
   return (
     <>
       <Hero />
+      <Gallery />
+      <FooterGallery />
     </>
   )
 }

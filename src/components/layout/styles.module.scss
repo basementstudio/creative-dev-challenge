@@ -1,3 +1,8 @@
+@import '~/css/helpers';
+
 .container {
   padding: 0 16px;
+  @include respond-to('min-tablet') {
+    padding: 0 32px;
+  }
 }

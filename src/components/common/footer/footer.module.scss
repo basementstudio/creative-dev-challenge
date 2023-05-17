@@ -25,71 +25,11 @@
   }
 }
 
-.topPart {
-  padding: tovw(40px, 12px) 0;
-  border-bottom: solid theme('colors.white');
-  border-bottom-width: tovw(1px, 1px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .topPartLeft {
-    display: flex;
-
-    p:first-child {
-      margin-right: tovw(94px, 24px);
-      white-space: nowrap;
-    }
-  }
-}
-
-.getInTouch {
-  @include respond-to('min-tablet-lg') {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-
-  .getInTouchInner {
-    padding: tovw(64px, 30px) 0;
-    position: relative;
-
-    h2 {
-      font-size: tovw(152px, 40px);
-      line-height: 105%;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      font-family: theme('fontFamily.basement-grotesque-display');
-    }
-
-    svg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      pointer-events: none;
-    }
-
-    .footerSvgDesktop {
-      z-index: -1;
-      width: tovw(1800px);
-      left: tovw(600px);
-      position: absolute;
-    }
-
-    .footerSvgMobile {
-      z-index: -1;
-      position: relative;
-      width: tovw(815px, 375px, 'mobile');
-      margin-top: tovw(-400px);
-      left: 0;
-    }
-  }
-}
-
 .lastPart {
   display: flex;
   flex-direction: column;
   padding-top: tovw(40px, 16px);
+  padding-bottom: tovw(40px, 16px);
   border-top: solid theme('colors.white');
   border-top-width: tovw(1px, 1px);
 
