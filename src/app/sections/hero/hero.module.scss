@@ -75,7 +75,7 @@ $fullscreen-font: calc(10.1vw - 6px);
     right: 32px;
     bottom: 0;
     z-index: 10;
-    width: 17.5vw;
+    width: 15.5vw;
     transform: translateY(50%);
     @include respond-to('tablet') {
       display: none;
