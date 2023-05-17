@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
@@ -21,6 +22,15 @@ export const Hero = () => {
           basement swag
         </p>
       </Marquee>
+      <div className={s.awwwardContainer}>
+        <Image
+          src="/assets/awwwards-trophy.png"
+          width={400}
+          height={500}
+          alt="Awwwards trophy"
+          className={s.awwward}
+        />
+      </div>
     </div>
   )
 }

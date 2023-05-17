@@ -1,11 +1,12 @@
 @import '~/css/helpers';
 @import '~/css/text';
 
-$fullscreen-font: calc(10.2vw - 6px);
+$fullscreen-font: calc(10.1vw - 6px);
 
 .wrapper {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: inherit;
   margin-top: calc($fullscreen-font / 2);
 
   .container {
@@ -66,6 +67,23 @@ $fullscreen-font: calc(10.2vw - 6px);
       @include respond-to('min-desktop-sm') {
         @include text-size-lg;
       }
+    }
+  }
+
+  & .awwwardContainer {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    z-index: 10;
+    width: 17.5vw;
+    transform: translateY(50%);
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    & .awwward {
+      width: 100%;
+      height: auto;
     }
   }
 }
