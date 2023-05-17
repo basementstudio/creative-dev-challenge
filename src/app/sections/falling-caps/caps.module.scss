@@ -1,0 +1,33 @@
+@import '~/css/helpers';
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .paragraph {
+    font-size: tovw(64px, 56px, 'desktop-large');
+    font-weight: 900;
+    max-width: max-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+    line-height: calc(86 / 72);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-expanded);
+
+    @include respond-to('tablet') {
+      font-size: tovw(30px, 16px, 'tablet');
+    }
+
+    @include respond-to('tablet-lg') {
+      font-size: tovw(48px, 48px, 'desktop');
+    }
+
+    .highlight {
+      color: var(--color-orange);
+    }
+  }
+}
