@@ -1,0 +1,23 @@
+@import '~/css/helpers';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: clamp(300px, 55vh, 600px);
+  gap: 16px;
+
+  @include respond-to('min-tablet') {
+    gap: 32px;
+    grid-template-rows: clamp(300px, 85vh, 850px) clamp(300px, 45vh, 500px);
+  }
+
+  & .imageContainer {
+    position: relative;
+    width: 100%;
+
+    & .image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

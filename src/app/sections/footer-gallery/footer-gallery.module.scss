@@ -1,0 +1,27 @@
+@import '~/css/helpers';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include respond-to('min-tablet') {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: clamp(300px, 45vh, 500px);
+    gap: 32px;
+  }
+
+  & .imageContainer {
+    position: relative;
+    width: 100%;
+    @include respond-to('tablet') {
+      height: clamp(200px, 45vh, 300px);
+    }
+
+    & .image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
