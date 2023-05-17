@@ -15,6 +15,12 @@ const basementGrotesque = localFont({
   variable: '--font-body'
 })
 
+const basementGrotesqueExpanded = localFont({
+  src: '../fonts/BasementGrotesque-BlackExpanded.woff2',
+  display: 'swap',
+  variable: '--font-expanded'
+})
+
 const basementGrotesqueDisplay = localFont({
   src: '../fonts/BasementGrotesqueDisplay-UltraBlackExtraExpanded.otf',
   display: 'swap',
@@ -61,7 +67,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         className={clsx(
           basementGrotesque.variable,
           neueMontreal.variable,
-          basementGrotesqueDisplay.variable
+          basementGrotesqueDisplay.variable,
+          basementGrotesqueExpanded.variable
         )}
       >
         <Header />
