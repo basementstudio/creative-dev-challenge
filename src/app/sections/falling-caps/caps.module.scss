@@ -1,11 +1,13 @@
 @import '~/css/helpers';
 
 .container {
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   .paragraph {
     font-size: tovw(64px, 56px, 'desktop-large');
@@ -19,15 +21,29 @@
     font-family: var(--font-expanded);
 
     @include respond-to('tablet') {
-      font-size: tovw(30px, 16px, 'tablet');
+      font-size: tovw(24px, 12px, 'tablet');
     }
 
     @include respond-to('tablet-lg') {
-      font-size: tovw(48px, 48px, 'desktop');
+      font-size: tovw(42px, 28px, 'desktop');
     }
 
     .highlight {
       color: var(--color-orange);
+
+      &::selection {
+        background-color: var(--color-orange);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .cap {
+    position: absolute;
+    width: 22vw;
+
+    @include respond-to('tablet') {
+      display: none;
     }
   }
 }
