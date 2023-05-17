@@ -27,6 +27,7 @@ export const Hero = () => {
           src="/assets/awwwards-trophy.png"
           width={400}
           height={500}
+          priority
           alt="Awwwards trophy"
           className={s.awwward}
         />

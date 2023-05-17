@@ -35,7 +35,14 @@ export const Gallery = () => {
     <Container className={s.container}>
       {images.map((image, index) => (
         <div key={index} className={s.imageContainer} style={image.stlye}>
-          <Image src={image.url} className={s.image} alt="basement-team" fill />
+          <Image
+            priority
+            src={image.url}
+            className={s.image}
+            alt="basement-team"
+            fill
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
         </div>
       ))}
     </Container>
