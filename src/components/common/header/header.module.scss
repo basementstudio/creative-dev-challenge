@@ -6,7 +6,6 @@
   width: 100%;
   top: 0;
   padding: 0;
-  background: var(--color-black);
 }
 
 .logo {
@@ -26,20 +25,15 @@
 
 .header {
   height: 4.5rem;
-  padding: 0 tovw(16px, 16px, 'mobile');
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 40;
   position: relative;
-}
 
-.icon {
-  width: 2.75rem;
-  height: 2.75rem;
-
-  & svg {
-    height: 100%;
+  @include respond-to('min-tablet') {
+    padding: 0 32px;
   }
 }
 
