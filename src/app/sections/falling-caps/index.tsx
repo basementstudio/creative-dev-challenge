@@ -5,7 +5,6 @@ import React, { CSSProperties } from 'react'
 
 import { Container } from '~/components/layout/container'
 
-import CAP_IMAGE from '../../../../public/assets/cap.png'
 import s from './caps.module.scss'
 
 export const FallingCaps = () => {
@@ -64,9 +63,8 @@ export const FallingCaps = () => {
           className={s.cap}
           height={509}
           key={index}
-          placeholder="blur"
           quality={100}
-          src={CAP_IMAGE}
+          src="/assets/cap.png"
           style={{ ...style }}
           width={509}
         />
