@@ -64,7 +64,7 @@ export const FallingCaps = () => {
           height={509}
           key={index}
           quality={100}
-          src="/assets/cap.png"
+          src="/assets/Cap.png"
           style={{ ...style }}
           width={509}
         />
