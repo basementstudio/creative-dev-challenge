@@ -36,12 +36,12 @@ export const Gallery = () => {
       {images.map((image, index) => (
         <div key={index} className={s.imageContainer} style={image.stlye}>
           <Image
-            priority
-            src={image.url}
-            className={s.image}
             alt="basement-team"
+            className={s.image}
             fill
-            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+            quality={100}
+            src={image.url}
           />
         </div>
       ))}

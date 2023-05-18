@@ -5,83 +5,86 @@ $fullscreen-font: calc(10.1vw - 6px);
 
 .wrapper {
   position: relative;
+  margin-top: tovw(32px, 32px, 'desktop');
   overflow-x: clip;
   overflow-y: inherit;
-  margin-top: calc($fullscreen-font / 2);
 
   .container {
-    padding: 12px 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 
-    & .text {
+    .text {
       display: flex;
       flex-direction: column;
-      font-size: $fullscreen-font;
-      line-height: 100%;
+      max-width: 100%;
       text-align: center;
       text-transform: uppercase;
+      line-height: 100%;
       white-space: nowrap;
-      max-width: 100%;
       font-family: var(--font-display);
+      font-size: tovw(139px, 139px, 'desktop');
 
       &::selection {
-        color: var(--color-black);
         background: var(--color-white);
+        color: var(--color-black);
       }
 
-      & .textSpan {
-        color: var(--color-black);
+      .textSpan {
+        transform: scale(1.2);
+        transform-origin: top;
         text-shadow: -1px -1px 0 var(--color-white),
           1px -1px 0 var(--color-white), -1px 1px var(--color-white),
           1px 1px 0 var(--color-white);
-        transform-origin: top;
-        transform: scale(1.2);
+        color: var(--color-black);
 
         &::selection {
-          color: var(--color-white);
+          background: var(--color-white);
           text-shadow: -1px -1px 0 var(--color-black),
             1px -1px 0 var(--color-black), -1px 1px var(--color-black),
             1px 1px 0 var(--color-black);
-          background: var(--color-white);
+          color: var(--color-white);
         }
       }
     }
   }
 
-  & .marquee {
+  .marquee {
+    margin-top: tovw(90px, 90px, 'desktop');
+    margin-bottom: tovw(90px, 90px, 'desktop');
+    border-top: tovw(1px, 1px, 'desktop') solid var(--color-white);
+    border-bottom: tovw(1px, 1px, 'desktop') solid var(--color-white);
+    padding: tovw(12px, 12px, 'desktop') 0;
     animation: appear 1.25s ease-in-out;
-    padding: 12px 0;
-    margin-top: calc($fullscreen-font / 2);
-    margin-bottom: calc($fullscreen-font / 2);
-    border-top: 1px solid var(--color-white);
-    border-bottom: 1px solid var(--color-white);
 
-    & .marqueeText {
-      margin-right: 16px;
+    .marqueeText {
       @include text-size-sm;
+
       @include respond-to('min-tablet') {
         @include text-size-md;
       }
+
       @include respond-to('min-desktop-sm') {
         @include text-size-lg;
       }
+
+      margin-right: tovw(16px, 16px, 'desktop');
     }
   }
 
-  & .awwwardContainer {
-    position: absolute;
-    right: 32px;
-    bottom: 0;
-    z-index: 10;
-    width: 15.5vw;
-    transform: translateY(50%);
+  .awwwardContainer {
     @include respond-to('tablet') {
       display: none;
     }
 
-    & .awwward {
+    position: absolute;
+    right: tovw(30px, 30px, 'desktop');
+    bottom: 0;
+    transform: translateY(50%);
+    z-index: 10;
+    width: 15.5vw;
+
+    .awwward {
       width: 100%;
       height: auto;
     }

@@ -1,55 +1,38 @@
 @import '~/css/helpers';
 
 .footer {
-  padding-bottom: tovw(40px, 22px);
-  max-width: 100vw;
+  margin: tovw(60px, 48px, 'desktop') 0 tovw(32px, 32px, 'desktop') 0;
   overflow: hidden;
   font-family: var(--font-text);
 
-  &.desktop {
-    background: #000e;
-    z-index: 50;
-    position: relative;
-  }
-
-  @include respond-to('min-tablet-lg') {
-    display: flex;
-    flex-direction: column;
-    padding-top: tovw(80px);
-  }
-
   p {
     text-transform: uppercase;
-    font-size: tovw(24px, 16px);
-    line-height: calc(24 / 20);
+    line-height: 1.2;
+    font-size: tovw(18px, 16px, 'desktop');
   }
 }
 
 .lastPart {
-  display: flex;
-  flex-direction: column;
-  padding-top: tovw(40px, 16px);
-  padding-bottom: tovw(40px, 16px);
-  border-top: solid theme('colors.white');
-  border-top-width: tovw(1px, 1px);
-
   @include respond-to('min-tablet-lg') {
     margin-top: 0;
   }
 
+  display: flex;
+  flex-direction: column;
+  border-top: tovw(1px, 1px, 'desktop') solid var(--color-white);
+  padding-top: tovw(40px, 16px);
+
   .social {
-    flex-grow: 1;
     flex-basis: 30%;
+    flex-grow: 1;
     text-transform: uppercase;
-    font-size: tovw(24px, 16px);
-    line-height: calc(24 / 20);
 
     div:first-child {
-      padding-top: tovw(10px, 10px, 'mobile');
-
       @include respond-to('min-tablet') {
         padding-top: unset;
       }
+
+      padding-top: tovw(10px, 10px, 'mobile');
     }
   }
 
@@ -59,35 +42,27 @@
     margin-top: tovw(30px, 30px, 'mobile');
 
     > span {
-      padding-bottom: tovw(10px, 10px, 'mobile');
-
       @include respond-to('min-tablet') {
         padding-bottom: unset;
       }
+
+      padding-bottom: tovw(10px, 10px, 'mobile');
     }
   }
 
   .rights {
     display: none;
-    flex-grow: 1;
     flex-basis: 30%;
+    flex-grow: 1;
     text-align: right;
   }
 }
 
 @include respond-to('min-tablet') {
-  .getInTouch {
-    .getInTouchInner {
-      h2 {
-        line-height: 86%;
-      }
-    }
-  }
-
   .lastPart {
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     .rights {
       display: block;
@@ -96,33 +71,5 @@
     .email {
       margin: unset;
     }
-  }
-}
-
-.getInTouchLink {
-  position: relative;
-  color: theme('colors.orange');
-  transition: color var(--duration-normal) var(--ease-link);
-  text-decoration: none;
-  display: block;
-  max-width: min-content;
-
-  @include respond-to('min-mobile') {
-    max-width: max-content;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 104%;
-    left: 0;
-    background: currentcolor;
-    width: 100%;
-    height: 0.06em;
-    pointer-events: none;
-  }
-
-  &::before {
-    content: '';
   }
 }

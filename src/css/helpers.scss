@@ -5,7 +5,6 @@
 $golden-ratio: 1.6180339887498948482;
 $reciprocal-golden-ratio: 1 / $golden-ratio;
 $duration: $reciprocal-golden-ratio * 1.2;
-
 $breakpoints: (
   'mobile': (
     max-width: 480px

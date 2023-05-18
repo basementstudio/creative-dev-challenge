@@ -24,12 +24,13 @@ export const Hero = () => {
       </Marquee>
       <div className={s.awwwardContainer}>
         <Image
-          src="/assets/awwwards-trophy.png"
-          width={400}
-          height={500}
-          priority
           alt="Awwwards trophy"
           className={s.awwward}
+          height={500}
+          priority
+          quality={100}
+          src="/assets/awwwards-trophy.png"
+          width={400}
         />
       </div>
     </div>
