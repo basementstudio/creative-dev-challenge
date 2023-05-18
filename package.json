@@ -1,8 +1,8 @@
 {
-  "name": "next-typescript",
+  "name": "creative-dev-challenge",
   "version": "1.0.0",
-  "description": "A minimalist boilerplate — Next.js with TypeScript.",
-  "repository": "https://github.com/basementstudio/next-typescript",
+  "description": "A challenge for creative dev — Next.js with TypeScript.",
+  "repository": "https://github.com/basementstudio/creative-dev-challenge",
   "author": "basement.studio",
   "private": true,
   "scripts": {
@@ -22,7 +22,6 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.5.2",
-    "react-merge-refs": "^2.0.2",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
