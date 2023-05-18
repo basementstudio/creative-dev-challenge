@@ -7,37 +7,36 @@ import s from './gallery.module.scss'
 
 export interface GalleryImage {
   url: string
-  stlye: CSSProperties
+  style: CSSProperties
 }
 
 export const Gallery = () => {
   const images: GalleryImage[] = [
     {
       url: '/images/basement-team-1.jpg',
-      stlye: {
+      style: {
         gridArea: '1 / 1 / 1 / 13'
       }
     },
     {
       url: '/images/basement-team-2.jpg',
-      stlye: {
-        gridArea: '2/ 1 / 2 / 9'
+      style: {
+        gridArea: '2 / 1 / 3 / 9'
       }
     },
     {
       url: '/images/basement-team-3.jpg',
-      stlye: {
-        gridArea: '2/ 9 / 2 / 13'
+      style: {
+        gridArea: '2 / 9 / 3 / 13'
       }
     }
   ]
   return (
-    <Container className={s.container}>
+    <Container as="section" className={s.container}>
       {images.map((image, index) => (
-        <div key={index} className={s.imageContainer} style={image.stlye}>
+        <div key={index} className={s.imageContainer} style={image.style}>
           <Image
             alt="basement-team"
-            className={s.image}
             fill
             priority
             quality={100}
