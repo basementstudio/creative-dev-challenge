@@ -1,4 +1,3 @@
-import { clsx } from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
@@ -9,30 +8,27 @@ import s from './hero.module.scss'
 
 export const Hero = () => {
   return (
-    <div className={s.wrapper}>
-      <Container as="section" className={s.container}>
-        <h1 id="h-line" className={clsx(s.text, s['hero-first-line'])}>
-          Basement
-          <span className={s.textSpan}>LAB</span>
-        </h1>
-      </Container>
+    <Container as="section" className={s.container}>
+      <h1>
+        Basement
+        <span>LAB</span>
+      </h1>
       <Marquee className={s.marquee} autoFill aria-label="Marquee section">
-        <p className={s.marqueeText}>
+        <p>
           A man can't have enough basement swag — A man can't have enough
           basement swag
         </p>
       </Marquee>
-      <div className={s.awwwardContainer}>
+      <div className={s.awwward}>
         <Image
           alt="Awwwards trophy"
-          className={s.awwward}
-          height={500}
+          height={360}
           priority
           quality={100}
           src="/assets/awwwards-trophy.png"
-          width={400}
+          width={250}
         />
       </div>
-    </div>
+    </Container>
   )
 }
