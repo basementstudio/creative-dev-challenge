@@ -15,7 +15,7 @@ At basement we love to create amazing things, and we're excited to see what you 
 - [@studio-freight/lenis](https://github.com/studio-freight/lenis)
 - [gsap](https://github.com/greensock/GSAP)
 
-## Things to Note
+## Things to evaluate
 
 - Tracks DOM elements and draws Three.js objects in their place using the correct scale and position (for images and models).
 - Implement Lenis for smooth and accessible scrolling, so everyone can enjoy your website.
