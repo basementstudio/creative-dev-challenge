@@ -1,6 +1,6 @@
 import '~/css/global.scss'
 
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
