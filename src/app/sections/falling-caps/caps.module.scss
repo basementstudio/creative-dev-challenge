@@ -1,34 +1,28 @@
 @import '~/css/helpers';
 
 .container {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+  @include respond-to('tablet') {
+    height: 60vh;
+  }
+
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 
-  .paragraph {
-    font-size: tovw(64px, 56px, 'desktop-large');
-    font-weight: 900;
-    max-width: max-content;
+  h2 {
     margin: 0 auto;
+    max-width: max-content;
     text-transform: uppercase;
-    line-height: calc(86 / 72);
-    display: flex;
-    flex-direction: column;
+    line-height: 1.2;
     font-family: var(--font-expanded);
+    font-size: tovw(64px, 42px, 'desktop');
+    font-weight: 900;
 
-    @include respond-to('tablet') {
-      font-size: tovw(24px, 12px, 'tablet');
-    }
-
-    @include respond-to('tablet-lg') {
-      font-size: tovw(42px, 28px, 'desktop');
-    }
-
-    .highlight {
+    span {
       color: var(--color-orange);
 
       &::selection {
@@ -39,11 +33,11 @@
   }
 
   .cap {
-    position: absolute;
-    width: 22vw;
-
     @include respond-to('tablet') {
       display: none;
     }
+
+    position: absolute;
+    width: tovw(320px, 220px, 'desktop');
   }
 }

@@ -4,6 +4,7 @@ import Marquee from 'react-fast-marquee'
 
 import { Container } from '~/components/layout/container'
 
+import AWWWAR_IMAGE from '../../../../public/assets/awwwards-trophy.png'
 import s from './hero.module.scss'
 
 export const Hero = () => {
@@ -25,7 +26,8 @@ export const Hero = () => {
           height={360}
           priority
           quality={100}
-          src="/assets/awwwards-trophy.png"
+          placeholder="blur"
+          src={AWWWAR_IMAGE}
           width={250}
         />
       </div>

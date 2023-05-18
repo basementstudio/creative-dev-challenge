@@ -3,6 +3,7 @@ import React, { CSSProperties } from 'react'
 
 import { Container } from '~/components/layout/container'
 
+import CAP_IMAGE from '../../../../public/assets/cap.png'
 import s from './caps.module.scss'
 
 export const FallingCaps = () => {
@@ -50,19 +51,22 @@ export const FallingCaps = () => {
   ]
   return (
     <Container className={s.container}>
-      <p className={s.paragraph}>
-        <span>We want to help make</span> the internet{' '}
-        <span className={s.highlight}>everything it can be.</span>
-      </p>
+      <h2>
+        We want to help make <br />
+        the internet <br />
+        <span>everything it can be.</span>
+      </h2>
       {caps.map((style, index) => (
         <Image
-          key={index}
-          src="/assets/Cap.png"
           alt="Cap"
-          width={500}
-          height={500}
           className={s.cap}
+          height={509}
+          key={index}
+          placeholder="blur"
+          quality={100}
+          src={CAP_IMAGE}
           style={{ ...style }}
+          width={509}
         />
       ))}
     </Container>

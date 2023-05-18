@@ -5,7 +5,7 @@ import { Container } from '~/components/layout/container'
 
 import s from './gallery.module.scss'
 
-export interface GalleryImage {
+type GalleryImage = {
   url: string
   style: CSSProperties
 }
